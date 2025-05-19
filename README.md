@@ -34,58 +34,6 @@ project/
 
 ---
 
-## 🛠️ Installation
-
-1. **Clone the repo**
-
-   ```bash
-   ```
-
-git clone [https://github.com/giovincentricels/AOLProject\_SoftwareEngineering.git](https://github.com/giovincentricels/AOLProject_SoftwareEngineering.git)
-cd AOLProject\_SoftwareEngineering
-
-````
-
-2. **Set up virtual environment**
-   ```bash
-python -m venv venv
-# macOS/Linux
-a source venv/bin/activate
-# Windows
-venv\\Scripts\\activate
-````
-
-3. **Install dependencies**
-
-   ```bash
-   ```
-
-pip install -r requirements.txt
-
-````
-
----
-
-## 🚀 Running the App
-
-1. **Development mode**
-   ```bash
-flask run
-````
-
-2. **Production mode**
-
-   ```bash
-   ```
-
-gunicorn app\:app
-
-```
-3. **Access**
-   Open your browser at `http://localhost:5000` and start uploading meal images.
-
----
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -104,6 +52,3 @@ Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ---
 
-*Made with ❤️ by Giovincent Ricel's Tanoto*
-
-```
