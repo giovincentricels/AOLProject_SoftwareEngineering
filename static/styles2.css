@@ -1,0 +1,364 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaf6e2;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #7cbf70;
+    color: #fff;
+}
+
+header .logo span {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 60px;
+}
+
+.logo span {
+    font-size: 0rem;
+    font-weight: bold;
+    animation: bounce 1s infinite alternate; /* Bounce animation */
+}
+
+header .brand h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header .brand h1 span {
+    color: #333;
+}
+
+.brand h1 {
+    display: flex; /* Flexbox untuk membuat elemen sejajar */
+    align-items: center; /* Posisikan elemen secara vertikal di tengah */
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Define the alternating color change animation */
+@keyframes colorChangeCalorie {
+    0% {
+        color: #000; /* Calorie starts with black */
+    }
+    25% {
+        color: #777; /* Calorie becomes a lighter shade of black (grey) */
+    }
+    50% {
+        color: #fff; /* Calorie changes to white */
+    }
+    75% {
+        color: #777; /* Calorie becomes a lighter shade of black (grey) */
+    }
+    100% {
+        color: #000; /* Calorie goes back to black */
+    }
+}
+
+@keyframes colorChangeInsight {
+    0% {
+        color: #fff; /* Insight starts with white */
+    }
+    25% {
+        color: #ccc; /* Insight becomes a lighter shade of white (light grey) */
+    }
+    50% {
+        color: #000; /* Insight changes to black */
+    }
+    75% {
+        color: #ccc; /* Insight becomes a lighter shade of white (light grey) */
+    }
+    100% {
+        color: #fff; /* Insight goes back to white */
+    }
+}
+
+/* Apply the color-changing animation */
+.calorie {
+    animation: colorChangeCalorie 8s infinite; /* Increased duration to 5s for smoother transition */
+}
+
+.insight {
+    animation: colorChangeInsight 8s infinite; /* Increased duration to 5s for smoother transition */
+}
+
+
+nav a {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+/* Flex Container */
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Atur jarak antara elemen */
+    align-items: flex-start; /* Elemen sejajar di bagian atas */
+    gap: 20px; /* Jarak antar elemen */
+}
+
+/* Intro Section */
+.intro {
+    flex: 1; /* Ambil ruang yang lebih besar */
+    margin-right: 20px; /* Beri jarak antara intro dan analyze */
+    margin-left: 240px;
+    margin-top: 120px;
+}
+
+/* Analyze Section */
+.analyze {
+    flex: 1; /* Sama dengan intro agar proporsinya setara */
+    max-width: 500px; /* Batasi lebar maksimal analyze jika diperlukan */
+    margin-right: 240px;
+    margin-top: 120px;
+    margin-bottom: 105px;
+}
+
+.intro h2 {
+    font-family: 'Jacques Francois Shadow';
+    width: 600px;
+    font-size: 80px; /* Atur ukuran font */
+    color: #333; /* Atur warna teks */
+    font-weight: bold; /* Atur ketebalan huruf */
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.intro p {
+    line-height: 1.2;
+    font-size: 24px;
+    font-family: 'Itim', cursive; /* Gunakan font Itim */
+    color: #333; /* Atur warna teks jika diperlukan */
+    width: 550px;
+}
+
+.analyze h3 {
+    font-family: 'Kadwa';
+    font-size: 2.15rem;
+    margin-bottom: 15px;
+    color:#333;
+}
+
+.upload-box {
+    width: 415px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #7cbf70;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan shadow */
+    border-radius: 10px; /* Opsional: membuat sudut lebih halus */
+}
+
+.upload-box label {
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload-box .upload-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Efek transisi */
+}
+
+.upload-box:hover .upload-icon {
+    transform: scale(1.2) rotate(10deg); /* Zoom dan rotasi */
+    color: #7cbf70; /* Opsional: Ubah warna ikon */
+}
+
+.sample-images {
+    margin-top: 20px;
+}
+
+.sample-images p {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sample-images .samples {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sample-images .samples img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan shadow */
+    border-radius: 5px; /* Opsional: sudut gambar lebih halus */
+    transition: box-shadow 0.3s ease; /* Efek animasi halus saat hover */
+}
+
+.sample-images .samples img:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow lebih besar saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #7cbf70;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    transition: 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.food-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+            margin: 0;
+            background-color: #eaf6e2;
+            font-family: 'Itim', cursive;
+            color: #333;
+        }
+    
+        .content-wrapper2 {
+            text-align: center;
+            max-width: 1600px;
+            max-height: 1000px;
+            height: 880px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        h2 {
+            font-size: 2.5rem;
+            color: #7cbf70;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+    
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+    
+        .food-classes {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.2rem;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* Adjust columns based on your needs */
+            grid-auto-rows: minmax(40px, auto); /* Set rows to auto-size */
+            gap: 10px;
+            height: calc(8 * 40px + 7 * 10px); /* Exact 8 rows with gaps */
+        }
+    
+        .food-classes li {
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    
+        header {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 16px 0px;
+            background-color: #7cbf70;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #7cbf70;
+            color: #fff;
+            text-align: center;
+        }
+    
+.copy p{
+    font-size: 0.8rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 9px;
+    padding-top: 5px;
+}

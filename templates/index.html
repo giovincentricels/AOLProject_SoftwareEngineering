@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Insight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span>AI</span>
+        </div>
+        <div class="brand">
+            <h1><span class="calorie">Food</span> <span class="insight">Insight</span></h1>
+        </div>
+        <nav>
+            <a href="{{ url_for('about_page') }}">ABOUT</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content-wrapper">
+            <div class="flex-container">
+                <section class="intro">
+                    <h2>KNOW YOUR FOOD, FUEL YOUR BODY</h2>
+                    <p>Our project is on a mission to provide an AI-powered solution that accurately detects the calories in your food. With cutting-edge technology, we aim to empower users to make informed nutritional choices, one scan at a time. Whether you're managing your diet or simply curious about what's on your plate, our AI is here to help you stay on track effortlessly.</p>
+                </section>
+                <section class="analyze">
+                    <h3>We'll analyze the calories for you!</h3>
+                    <div class="upload-box">
+                        <form id="upload-form" action="/predict" method="POST" enctype="multipart/form-data">
+                            <input type="file" id="file-upload" name="file" accept=".jpg,.jpeg,.png" required>
+                            <button type="submit">Upload</button>
+                        </form>
+                    </div>
+                    <div class="sample-images">
+                        <p>Try uploading an image like the example below</p>
+                        <div class="samples">
+                            <img src="{{ url_for('static', filename='sample1.jpg') }}" alt="Sample Food 1" class="sample-image">
+                            <img src="{{ url_for('static', filename='sample2.jpg') }}" alt="Sample Food 2" class="sample-image">
+                            <img src="{{ url_for('static', filename='sample3.jpg') }}" alt="Sample Food 3" class="sample-image">
+                            <img src="{{ url_for('static', filename='sample4.jpg') }}" alt="Sample Food 4" class="sample-image">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <button class="exit-btn" onclick="closeModal()">Exit</button>
+                <h2>Food Analysis Result</h2>
+                <img id="foodImage" src="" alt="Uploaded Food" class="food-image">
+                <p><strong>Food Name:</strong> <span id="foodName"></span></p>
+                <p><strong>Calories:</strong> <span id="calories"></span></p>
+                <p><strong>Diet Suitability:</strong> <span id="dietSuitability"></span></p>
+                <!-- <p><strong>Confidence:</strong> <span id="confidence"></span></p> -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Food Insight</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+</html>
